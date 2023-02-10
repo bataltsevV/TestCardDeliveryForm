@@ -30,7 +30,7 @@ public class CardDeliveryFormTest {
         $("[data-test-id='phone'] [type=tel]").setValue("+79029039293");
         $x("//*[contains(@class,'checkbox__text')]").click();
         $x("//*[contains(text(),'Забронировать')]").click();
-        $("[data-test-id='notification'] [class='notification__content']").should(Condition.visible, Duration.ofSeconds(13));
+        $("[data-test-id='notification'] [class='notification__content']").should(Condition.visible, Duration.ofSeconds(15));
         $("[data-test-id='notification'] [class='notification__content']").shouldHave(Condition.exactText("Встреча успешно забронирована на " + minDateOfMeeting));
     }
 
